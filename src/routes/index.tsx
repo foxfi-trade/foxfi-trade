@@ -36,13 +36,25 @@ export const Route = createFileRoute("/")({
           "The #1 all-in-one DeFi den. Nothing else comes close: a pro trading desk better than anything out there, live charts, instant swaps, portfolio positions, yields, TVL, price alerts and watchlists for BTC, ETH, SOL and 18 majors — fully non-custodial.",
       },
       { property: "og:url", content: "https://foxfi.trade/" },
+      { property: "og:site_name", content: "FoxFi" },
       {
         property: "og:image",
-        content: "https://foxfi.trade/og-foxfi.jpg",
+        content: "https://foxfi.trade/og-foxfi-v2.jpg",
+      },
+      {
+        property: "og:image:secure_url",
+        content: "https://foxfi.trade/og-foxfi-v2.jpg",
+      },
+      { property: "og:image:type", content: "image/jpeg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      {
+        property: "og:image:alt",
+        content: "FoxFi — the #1 all-in-one DeFi command center",
       },
       {
         name: "twitter:image",
-        content: "https://foxfi.trade/og-foxfi.jpg",
+        content: "https://foxfi.trade/og-foxfi-v2.jpg",
       },
       { name: "twitter:title", content: "FoxFi — The #1 DeFi Command Center" },
       {
