@@ -1,0 +1,13 @@
+# FoxFi on Netlify.
+# Nitro's netlify preset emits the SSR function to .netlify/functions-internal
+# and the static client assets to dist/.
+[build]
+  # This repo ships bun.lock (no package-lock.json), so install with Bun.
+  # If you prefer npm, run `npm install` locally, commit package-lock.json,
+  # and change this to "npm run build".
+  command = "bun install && bun run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NITRO_PRESET = "netlify"
