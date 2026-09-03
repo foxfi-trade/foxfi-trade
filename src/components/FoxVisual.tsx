@@ -1,4 +1,5 @@
-import foxMark from "../assets/foxfi-mark.png.asset.json";
+/** Served from public/foxfi-mark.png so it works on any host (Netlify included). */
+const foxMark = { url: "/foxfi-mark.png" };
 
 /**
  * Hand-drawn geometric fox marks — no photography, no AI imagery.

@@ -35,14 +35,14 @@ export const Route = createFileRoute("/")({
         content:
           "The #1 all-in-one DeFi den. Nothing else comes close: a pro trading desk better than anything out there, live charts, instant swaps, portfolio positions, yields, TVL, price alerts and watchlists for BTC, ETH, SOL and 18 majors — fully non-custodial.",
       },
-      { property: "og:url", content: "https://fox-folio-connect.lovable.app/" },
+      { property: "og:url", content: "https://foxfi.trade/" },
       {
         property: "og:image",
-        content: "https://fox-folio-connect.lovable.app/og-foxfi.jpg",
+        content: "https://foxfi.trade/og-foxfi.jpg",
       },
       {
         name: "twitter:image",
-        content: "https://fox-folio-connect.lovable.app/og-foxfi.jpg",
+        content: "https://foxfi.trade/og-foxfi.jpg",
       },
       { name: "twitter:title", content: "FoxFi — The #1 DeFi Command Center" },
       {
@@ -51,7 +51,7 @@ export const Route = createFileRoute("/")({
           "A trading desk better than anything else, instant swaps, live charts, positions, yields, alerts and watchlists. Connect any EVM wallet — nothing else comes close.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://fox-folio-connect.lovable.app/" }],
+    links: [{ rel: "canonical", href: "https://foxfi.trade/" }],
   }),
   component: Index,
 });
