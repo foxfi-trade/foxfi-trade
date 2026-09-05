@@ -23,7 +23,7 @@ import { useWallet } from "../lib/wallet";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "FoxFi — Connect an EVM Wallet to View Your DeFi Positions" },
+      { title: "FoxFi — Connect an SOL Wallet to View Your DeFi Positions" },
       {
         name: "description",
         content:
