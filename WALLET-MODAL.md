@@ -29,7 +29,7 @@ scripts: [ { src: "/noir.js", defer: true } ],
 `ConnectButton` in `src/components/site.tsx` renders exactly your markup:
 
 ```html
-<button type="button" class="connect-wallet noir-connect noir-solana ...">Connect Wallet</button>
+<button type="button" class="connect-wallet noir-connect noir-evm ...">Connect Wallet</button>
 ```
 
 It appears in the header, the hero, and on every wallet-gated page, so bind with
