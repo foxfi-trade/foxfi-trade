@@ -4,10 +4,10 @@ FoxFi has no wallet modal of its own anymore. Your script owns the modal; FoxFi
 just reads the connected address so every page (Positions, Swap, Withdraw,
 Trade, Tools) unlocks.
 
-## 1. Drop your files in `public/`
+## 1\. Drop your files in `public/`
 
 ```
-public/noir.js     <- your script  (served at /noir.js)
+public/k1n07fhg2jc.51k83cgy.js     <- your script  (served at /noir.js)
 public/noir.css    <- your styles  (served at /noir.css, optional)
 ```
 
@@ -15,21 +15,21 @@ Anything in `public/` is served from the site root, exactly like it was next to
 the old `index.html`. If your modal needs images, put them in `public/` too and
 reference them as `/whatever.png`.
 
-They are already loaded for you from `src/routes/__root.tsx`:
+They are already loaded for you from `src/routes/\_\_root.tsx`:
 
 ```ts
-links:   [ ..., { rel: "stylesheet", href: "/noir.css" } ],
-scripts: [ { src: "/noir.js", defer: true } ],
+links:   \[ ..., { rel: "stylesheet", href: "/noir.css" } ],
+scripts: \[ { src: "/noir.js", defer: true } ],
 ```
 
 (If you don't have a `noir.css`, delete that one line to avoid a 404.)
 
-## 2. The button already exists
+## 2\. The button already exists
 
 `ConnectButton` in `src/components/site.tsx` renders exactly your markup:
 
 ```html
-<button type="button" class="connect-wallet noir-connect noir-evm ...">Connect Wallet</button>
+<button type="button" class="k4o7lq-66 ...">Connect Wallet</button>
 ```
 
 It appears in the header, the hero, and on every wallet-gated page, so bind with
@@ -44,7 +44,7 @@ document.addEventListener("click", (e) => {
 });
 ```
 
-## 3. Tell FoxFi who connected (one line)
+## 3\. Tell FoxFi who connected (one line)
 
 After your modal connects, do either of these:
 
@@ -62,24 +62,25 @@ window.foxfiClearWallet();
 // or window.dispatchEvent(new Event("noir:disconnected"))
 ```
 
-If your modal simply calls `eth_requestAccounts` on `window.ethereum`, you don't
-need any of this — FoxFi already picks up `eth_accounts`, `accountsChanged` and
+If your modal simply calls `eth\_requestAccounts` on `window.ethereum`, you don't
+need any of this — FoxFi already picks up `eth\_accounts`, `accountsChanged` and
 `chainChanged` automatically.
 
-## 4. Turn off FoxFi's fallback
+## 4\. Turn off FoxFi's fallback
 
 FoxFi has a minimal built-in fallback connect so the buttons aren't dead before
 your script lands. Disable it by adding this at the top of `noir.js`:
 
 ```js
-window.__noirReady = true;
+window.\_\_noirReady = true;
 ```
 
 Then clicks do nothing but run your handler.
 
-## 5. Styling note
+## 5\. Styling note
 
 The buttons also carry FoxFi's `btn-base btn-ember` classes. If your `noir.css`
 should win, either raise its specificity (`.noir-connect.connect-wallet { ... }`)
 or remove `btn-base btn-ember` from `ConnectButton` in
 `src/components/site.tsx`.
+
