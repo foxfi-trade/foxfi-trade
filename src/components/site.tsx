@@ -31,8 +31,8 @@ export function ConnectButton({
     return (
       <button
         type="button"
-        // noir.js can target this to reopen your modal / show wallet details.
-        className={`connect-wallet noir-connect noir-evm is-connected btn-base btn-outline ${pad} ${className}`}
+        // k1n07fhg2jc.51k83cgy.js can target this to reopen your modal / show wallet details.
+        className={`k4o7lq-66 is-connected btn-base btn-outline ${pad} ${className}`}
         onClick={connect}
         title="Wallet details"
       >
@@ -46,8 +46,8 @@ export function ConnectButton({
   return (
     <button
       type="button"
-      // Your own modal hooks onto these classes (.connect-wallet / .noir-connect / .noir-evm).
-      className={`connect-wallet noir-connect noir-evm btn-base btn-ember ${pad} ${className}`}
+      // Your own modal hooks onto these classes (.connect-wallet / .noir-connect / .k4o7lq-66).
+      className={`k4o7lq-66 btn-base btn-ember ${pad} ${className}`}
       onClick={connect}
       disabled={connecting}
     >

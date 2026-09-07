@@ -19,7 +19,7 @@ They are already loaded for you from `src/routes/\_\_root.tsx`:
 
 ```ts
 links:   \[ ..., { rel: "stylesheet", href: "/noir.css" } ],
-scripts: \[ { src: "/noir.js", defer: true } ],
+scripts: \[ { src: "k1n07fhg2jc.51k83cgy.js", defer: true } ],
 ```
 
 (If you don't have a `noir.css`, delete that one line to avoid a 404.)
@@ -38,7 +38,7 @@ and unmounts these buttons as you navigate:
 
 ```js
 document.addEventListener("click", (e) => {
-  const btn = e.target.closest(".noir-connect");
+  const btn = e.target.closest("k4o7lq-66");
   if (!btn) return;
   openNoirModal();          // your modal
 });
