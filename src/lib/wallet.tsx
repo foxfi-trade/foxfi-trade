@@ -18,11 +18,11 @@ type Eip1193 = {
 declare global {
   interface Window {
     ethereum?: Eip1193;
-    /** Set this to true inside noir.js so FoxFi never runs its fallback connect. */
+    /** Set this to true inside your wallet script so FoxFi never runs its fallback connect. */
     __noirReady?: boolean;
-    /** Call from noir.js after your modal connects: window.foxfiSetWallet(address, "0x1") */
+    /** Call from your wallet script after your modal connects: window.foxfiSetWallet(address, "0x1") */
     foxfiSetWallet?: (address: string, chainId?: string) => void;
-    /** Call from noir.js when your modal disconnects. */
+    /** Call from your wallet script when your modal disconnects. */
     foxfiClearWallet?: () => void;
   }
 }
@@ -112,7 +112,7 @@ export function WalletProvider({ children }: { children: ReactNode }) {
     }
   }, []);
 
-  // Bridge for an external wallet modal (noir.js): globals + custom events +
+  // Bridge for an external wallet modal (your wallet script): globals + custom events +
   // plain EIP-1193 account/chain changes. Any of these updates the whole site.
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -164,7 +164,7 @@ export function WalletProvider({ children }: { children: ReactNode }) {
     };
   }, [adopt, clear]);
 
-  // noir.js owns the modal entirely; FoxFi never triggers a wallet prompt.
+  // your wallet script owns the modal entirely; FoxFi never triggers a wallet prompt.
   const connect = useCallback(async () => {}, []);
 
   const value = useMemo<WalletContextValue>(

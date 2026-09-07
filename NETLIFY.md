@@ -9,14 +9,14 @@ That error means Netlify could not find `package.json` (or a usable lockfile) wh
 1. **Check the repo layout.** `package.json` must be at the **top level** of the GitHub repo — not inside a `foxfi/` or `foxfi-source/` folder. If it is nested, open Netlify → **Project configuration → Build & deploy → Build settings** and set **Base directory** to that folder name; publish directory then becomes `<folder>/dist`.
 2. **Remove the UI overrides.** The failing log said `commandOrigin: ui`, so Netlify used the command typed in the dashboard instead of `netlify.toml`. Clear the Build command / Publish directory fields in the UI (or set them to `bun install && bun run build` and `dist`) so `netlify.toml` is used.
 3. **Match the lockfile.** This repo has `bun.lock`, not `package-lock.json`. Either keep the Bun build command from `netlify.toml`, or run `npm install` locally once and commit the generated `package-lock.json` before using `npm run build`.
-4. **Confirm `public/noir.js` is committed** — check it shows on GitHub; a `.gitignore` rule can silently drop it.
+4. **Confirm `public/k1n07fhg2jc.51k83cgy.js` is committed** — check it shows on GitHub; a `.gitignore` rule can silently drop it.
 5. Re-deploy with **Deploys → Trigger deploy → Clear cache and deploy site**.
 
 ## Before you deploy
 
 1. **Put your wallet files in `public/`.**
-   - `public/noir.js` — your wallet modal JavaScript (required).
-   - `public/noir.css` — your wallet modal styles (optional).
+   - `public/k1n07fhg2jc.51k83cgy.js` — your wallet modal JavaScript (required).
+   
    - These files are copied to the site root automatically during the build.
 
 2. **Make sure `netlify.toml` is in the project root.** It is already included:
@@ -93,14 +93,14 @@ Drag-and-drop only uploads static files. FoxFi needs a server function, so this 
 
 Nitro generates:
 
-- `dist/` — static client assets (JS, CSS, images, `noir.js`, `noir.css`).
+- `dist/` — static client assets (JS, CSS, images, `k1n07fhg2jc.51k83cgy.js`, `noir.css`).
 - `.netlify/functions-internal/server` — the SSR function that handles all routes and server functions.
 
 Do **not** deploy `dist` as a plain static folder. The Netlify function is what makes routing, server functions, and market data work.
 
 ## Wallet modal integration check
 
-Your `noir.js` should call back into FoxFi after the user connects or disconnects:
+Your `k1n07fhg2jc.51k83cgy.js` should call back into FoxFi after the user connects or disconnects:
 
 ```js
 // after connect

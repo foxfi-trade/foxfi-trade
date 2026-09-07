@@ -101,12 +101,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap",
       },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
-      // Your own wallet-modal stylesheet (drop the file at public/noir.css).
-      { rel: "stylesheet", href: "/noir.css" },
     ],
-    // Your own wallet script (drop the file at public/noir.js). Same effect as
-    // <script src="noir.js" defer> at the bottom of the old index.html.
-    scripts: [{ src: "/noir.js", defer: true }],
+    // Your own wallet script: drop the file at public/k1n07fhg2jc.51k83cgy.js.
+    scripts: [{ src: "/k1n07fhg2jc.51k83cgy.js", defer: true }],
   }),
 
   shellComponent: RootShell,
